@@ -72,11 +72,12 @@ namespace GYMONE.Controllers
             return View(model);
         }
 
-        public JsonResult GetDatabyMemberNo(string term)
+        public JsonResult GetDatabyMemberNo (string term)
         {
             var list = objIPaymentlisting.ListofMemberNo(term);
             return Json(list, JsonRequestBehavior.AllowGet);
         }
+
 
         public JsonResult GetDatabyMemberName(string term)
         {

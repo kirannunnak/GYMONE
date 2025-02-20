@@ -263,6 +263,7 @@
     </Compile>
     <Compile Include="Models\AssignRoleVM.cs" />
     <Compile Include="Models\ChangepasswordVM.cs" />
+    <Compile Include="Models\CustomerDTO.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\MemberRegistrationDTO.cs" />
     <Compile Include="Models\MonthwiseModel.cs" />
@@ -297,7 +298,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Repository\AccountData.cs" />
+    <Compile Include="Repository\CustomerDetails.cs" />
     <Compile Include="Repository\IAccountData.cs" />
+    <Compile Include="Repository\ICustomerDetails.cs" />
     <Compile Include="Repository\IlReports.cs" />
     <Compile Include="Repository\IPlanMaster.cs" />
     <Compile Include="Repository\IRecepit.cs" />
@@ -517,6 +520,7 @@
     <Content Include="Views\Account\AllRegisterUserDetails.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\RenewalSearch\RenewalReport.cshtml" />
+    <Content Include="Views\DetailsReport\CustomerDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
