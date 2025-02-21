@@ -7,19 +7,13 @@ pipeline {
                                                git url: 'https://github.com/kirannunnak/GYMONE.git', branch: 'master'                              
                                     }
                     }
-                stage('docker build')
-                        {
-                        steps
-                                    {
-                                                script
-                                                {
-                                                            sh 'docker build -t gymapp:latest .' 
-                                                            docker.withRegistry('kirannunna2024')
-                                                            {
-                                                               docker.push("gymapp:latest")
-                                                            }
-                                                }
-                                    }
+                stage('Restore Dependencies') {
+                        steps {
+                            script {
+                                // Restore .NET dependencies using NuGet
+                                sh 'dotnet restore'
+                            }
                         }
+                    }                
                 }
     }
