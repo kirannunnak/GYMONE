@@ -10,14 +10,14 @@ pipeline {
                 stage('Verify .NET SDK') {
                             steps {
                                 script {
-                                    bat 'dotnet --version'
+                                    'dotnet --version'
                                 }
                             }
                         }
                 stage('Restore Dependencies') {
                         steps {
                             script {                              
-                                bat 'dotnet restore'
+                                'dotnet restore'
                             }
                         }
                     }                
