@@ -7,6 +7,13 @@ pipeline {
                                                git url: 'https://github.com/kirannunnak/GYMONE.git', branch: 'master'                              
                                     }
                     }
+                stage('Verify .NET SDK') {
+                            steps {
+                                script {
+                                    sh 'dotnet --version'
+                                }
+                            }
+                        }
                 stage('Restore Dependencies') {
                         steps {
                             script {
