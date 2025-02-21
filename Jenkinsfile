@@ -35,6 +35,7 @@ pipeline {
                 stage('Publish') {
                         steps {
                             script {
+                                'echo Current directory: %CD%'
                                 'dotnet publish --configuration %BUILD_CONFIGURATION% --output %DEPLOY_PATH%'
                             }
                         }
