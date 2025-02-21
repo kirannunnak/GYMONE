@@ -10,15 +10,14 @@ pipeline {
                 stage('Verify .NET SDK') {
                             steps {
                                 script {
-                                    bat '"C:\\Windows\\System32\\cmd.exe" /c dotnet --version'
+                                    bat 'dotnet --version'
                                 }
                             }
                         }
                 stage('Restore Dependencies') {
                         steps {
-                            script {
-                                // Restore .NET dependencies using NuGet
-                                bat '"C:\\Windows\\System32\\cmd.exe" /c dotnet restore'
+                            script {                              
+                                bat 'dotnet restore'
                             }
                         }
                     }                
