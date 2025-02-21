@@ -2,7 +2,7 @@ pipeline {
             agent any
             environment {
                     BUILD_CONFIGURATION = 'Release'
-                    DEPLOY_PATH = 'C:\\knunna\\'  // Use double backslashes for Windows paths
+                    DEPLOY_PATH = 'C:\\knunna\\Release\\'  // Use double backslashes for Windows paths
                 }
     
             stages {
