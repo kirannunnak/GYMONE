@@ -10,7 +10,7 @@ pipeline {
             stages {
                 stage('Clone') {
                             steps   {
-                                                git clone https://github.com/kirannunnak/GYMONE.git"                                
+                                               git branch: 'master', url: 'https://github.com/kirannunnak/GYMONE.git'                               
                                     }
                     }
                 stage('docker build')
