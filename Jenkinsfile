@@ -2,7 +2,7 @@ pipeline {
             agent any
             environment {
                     BUILD_CONFIGURATION = 'Release'
-                    DEPLOY_PATH = 'C:\\Users\\Kiran.Nunna\\Downloads\\MVC-DEMO-PROJECT-master\\MVC-DEMO-PROJECT-master\\GYMONE\\Release'  // Use double backslashes for Windows paths
+                    DEPLOY_PATH = 'C:\\knunna\\Release\\'  // Use double backslashes for Windows paths
                 }
     
             stages {
