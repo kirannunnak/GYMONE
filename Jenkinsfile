@@ -35,17 +35,10 @@ pipeline {
                 stage('Publish') {
                         steps {
                             script {
-                                'dotnet publish --configuration %BUILD_CONFIGURATION% --output ./publish'
+                                'dotnet publish --configuration %BUILD_CONFIGURATION% --output %DEPLOY_PATH%'
                             }
                         }
-                    }
-                stage('Deploy') {
-                        steps {
-                            script {
-                                'xcopy /E /I /H ./publish %DEPLOY_PATH%'
-                            }
-                        }
-                    }
+                    }                
                 }
             
     }
