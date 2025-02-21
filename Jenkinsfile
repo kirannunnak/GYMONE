@@ -4,13 +4,13 @@ pipeline {
              environment {
                             IMAGE_NAME = "gymoneapp"       // Docker image name
                             IMAGE_TAG = "latest"               // Image tag (could also use branch name or commit ID)
-                            DOCKERHUB_REPO = "kirannunna2024/gymoneapp" // Docker Hub repo (replace with your Docker Hub username/repo)
+                            DOCKERHUB_REPO = "kirannunna2024/testapp" // Docker Hub repo (replace with your Docker Hub username/repo)
             }
     
             stages {
                 stage('Clone') {
                             steps   {
-                                                sh "git clone https://$GIT_USERNAME:$GIT_PASSWORD@https://github.com/kirannunnak/GYMONE.git"                                
+                                                sh "git clone https://github.com/kirannunnak/GYMONE.git"                                
                                     }
                     }
                 stage('Build')
