@@ -11,10 +11,13 @@ pipeline {
                         {
                         steps
                                     {
-                                                sh 'docker build -t gymapp:latest .' 
-                                                docker.withRegistry('kirannunna2024')
+                                                script
                                                 {
-                                                   docker.push("gymapp:latest")
+                                                            sh 'docker build -t gymapp:latest .' 
+                                                            docker.withRegistry('kirannunna2024')
+                                                            {
+                                                               docker.push("gymapp:latest")
+                                                            }
                                                 }
                                     }
                         }
