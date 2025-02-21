@@ -10,17 +10,10 @@ pipeline {
             stages {
                 stage('Clone') {
                             steps   {
-                                                sh "git clone https://github.com/kirannunnak/GYMONE.git"                                
+                                                git clone https://github.com/kirannunnak/GYMONE.git"                                
                                     }
                     }
-                stage('Build')
-                        {
-                        steps
-                                    {
-                                                sh 'mvn clean install'
-                                    }
-                        }
-                 stage('docker push')
+                stage('docker build')
                         {
                         steps
                                     {
