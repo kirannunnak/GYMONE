@@ -425,6 +425,7 @@
     <Content Include="fonts\font-awesome\scss\_spinning.scss" />
     <Content Include="fonts\font-awesome\scss\_stacked.scss" />
     <Content Include="fonts\font-awesome\scss\_variables.scss" />
+    <Content Include="Jenkinsfile" />
     <None Include="Properties\PublishProfiles\Test.pubxml" />
     <Content Include="Reports\ExactDate.rpt" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
