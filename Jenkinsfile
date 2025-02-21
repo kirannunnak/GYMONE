@@ -8,15 +8,26 @@ pipeline {
             }
     
             stages {
-                stage('CheckOut Code') {
-                steps{
-                          script {
-                                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'Gitcredentials', usernameVariable: 'Username', passwordVariable: 'Password']]) 
-                                    {
-                                        sh "git clone https://$GIT_USERNAME:$GIT_PASSWORD@https://github.com/kirannunnak/GYMONE.git"
-                                    }  
-                                }
-                        }
+                stage('Clone') {
+                            steps   {
+                                                sh "git clone https://$GIT_USERNAME:$GIT_PASSWORD@https://github.com/kirannunnak/GYMONE.git"                                
+                                    }
                     }
+                stage('Build')
+                        {
+                        steps
+                                    {
+                                                sh 'mvn clean install'
+                                    }
+                        }
+                 stage('docker push')
+                        {
+                        steps
+                                    {
+                                                script {
+                                                            docker.build('gymapp').push('latest')
+                                                       }
+                                    }
+                        }
             }
     }
