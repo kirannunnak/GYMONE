@@ -10,7 +10,7 @@ pipeline {
                 stage('Verify .NET SDK') {
                             steps {
                                 script {
-                                    'dotnet --version'
+                                   echo 'dotnet --version'
                                 }
                             }
                         }
