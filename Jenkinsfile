@@ -11,11 +11,11 @@ pipeline {
                         {
                         steps
                                     {
-                                                sh 'docker build -t gymapp:latest .' // Builds Docker image with tag 'my-image:latest' from current directory
-
-                                                docker.withRegistry('kirannunna2024') { // Optional: Authenticate with Docker Hub
-
-                                               docker.push("gymapp:latest")
+                                                sh 'docker build -t gymapp:latest .' 
+                                                docker.withRegistry('kirannunna2024')
+                                                {
+                                                   docker.push("gymapp:latest")
+                                                }
                                     }
                         }
                 }
