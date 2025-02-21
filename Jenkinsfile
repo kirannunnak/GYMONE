@@ -10,7 +10,7 @@ pipeline {
                 stage('Verify .NET SDK') {
                             steps {
                                 script {
-                                    bat '"C:\\Windows\\System32\\cmd.exe" /c dotnet --version'
+                                    bat '"C:\Windows\System32\cmd.exe" /c dotnet --version'
                                 }
                             }
                         }
