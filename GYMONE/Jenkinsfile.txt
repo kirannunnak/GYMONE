@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('hello') {
             steps {
-                sh 'echo Hello Jenkins!'
+                git branch: 'main', url: 'https://github.com/kirannunnak/GYMONE.git', credentialsId: 'gitcredentials'
             }
         }
     }
