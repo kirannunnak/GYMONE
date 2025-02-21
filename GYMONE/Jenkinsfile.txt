@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent any 
     stages {
-        stage('hello') {
+        stage('Stage 1') {
             steps {
-                git branch: 'main', url: 'https://github.com/kirannunnak/GYMONE.git', credentialsId: 'gitcredentials'
+                echo 'Hello world!' 
             }
         }
     }
