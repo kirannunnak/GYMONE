@@ -34,8 +34,7 @@ pipeline {
                     }
                 stage('Publish') {
                         steps {
-                            script {
-                                powershell 'Get-ChildItem -Path "%DEPLOY_PATH%"'
+                            script {                                
                                 'dotnet publish --configuration %BUILD_CONFIGURATION% --output %DEPLOY_PATH%'
                             }
                         }
